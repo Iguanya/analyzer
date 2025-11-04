@@ -97,7 +97,7 @@ def init_dashboard(server):
         dash_table.DataTable(
             id="contracts-table",
             columns=[{"name": i, "id": i} for i in [
-                "buyer_name", "identifier_legalname", "title", "total_value_kes",
+                "buyer_name", "identifier_legalname", "title", "total_value_kes", "contract_duration_days",
                 "year", "is_anomaly", "anomaly_score"
             ] if i in merged_df.columns],
             data=merged_df.head(200).to_dict("records"),
